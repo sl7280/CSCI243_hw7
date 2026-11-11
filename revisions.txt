@@ -1,0 +1,5 @@
+commit 49cd5a17208d45115c76151d4dba92bd6d490b24
+Author: Stephanie Livingston <sl7280@rit.edu>
+Date:   Wed Nov 11 15:28:10 2026 -0500
+
+    Baseline: byte reading loop
