@@ -17,7 +17,7 @@ int main(void){
     int type;
     int len;
     int ts;
-    char payload[];
+//    char payload[];
 
     int b0;
     bool is_reading = true;
@@ -28,9 +28,10 @@ int main(void){
         b0 = getchar();
         counter += 1;
         if(b0 != EOF){
-
+        
+        //find the version and the type in the first char
         if(counter == 0){
-            printf("test 0 : %d\n" b0);
+            printf("test 0 : %d\n", b0);
             
         }
         
