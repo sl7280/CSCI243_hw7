@@ -28,8 +28,8 @@ int main(void){
 
     //read in each character while it is not EOF
     while(is_reading == true){
+        b0 = getchar();
         if(b0 != EOF){
-            b0 = getchar();
 
             //find the version and the type in the first char
             //find the high and low nibbles
@@ -37,36 +37,34 @@ int main(void){
             int low = b0 & 0xF;
             printf("version=%d type=%d", high, low);
            
-
             //find the length of the message
+            b0 = getchar();
             b1 = b0;
             b0 = getchar();
             b2 = b0;
             big_endian = ((unsigned)b1 << 8) | (unsigned)b2;
-            printf(" len=%d", big_endian);
+            printf(" len=%d ", big_endian);
             message_length = big_endian;
             
-            //get the timestamp
-            b1 = b0;
-            printf("%d", b1);
-            b0 = getchar();
-            b2 = b0;
-            printf("%d", b2);
-            b0 = getchar();
-            b3 = b0;
-            printf("%d", b3);
-            b0 = getchar();
-            b4 = b0;
-            printf("%d", b4);
+            //get the timestamp   
+            b1 = getchar();
+            printf("%c", b1);
+            b2 = getchar();
+            printf("%c", b2);
+            b3 = getchar();
+            printf("%c", b3);
+            b4 = getchar();
+            printf("%c", b4);
 
-            int big_endian = ((unsigned long)b1 << 32) | ((unsigned long)b2 << 16) | ((unsigned)b3 << 8) | (unsigned)b4;
-            printf(" ts=%d", big_endian);
+            unsigned int big_endian = ((unsigned long)b1 << 32) | ((unsigned long)b2 << 16) | ((unsigned)b3 << 8) | (unsigned)b4;
+            printf(" ts=%u ", big_endian);
 
             //print out each character in the message
             for(int i=0; i < message_length; i++){
-                printf("%c", b0);
                 b0 = getchar();
+                printf("%c", b0);
             }
+            printf("\n");
 
         //end of the if statement for EOF
         }
