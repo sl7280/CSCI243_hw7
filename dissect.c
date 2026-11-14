@@ -48,18 +48,19 @@ int main(void){
             
             //get the timestamp   
             b1 = getchar();
-            printf("%c", b1);
+//            printf("%c", b1);
             b2 = getchar();
-            printf("%c", b2);
+  //          printf("%c", b2);
             b3 = getchar();
-            printf("%c", b3);
+    //        printf("%c", b3);
             b4 = getchar();
-            printf("%c", b4);
+      //      printf("%c", b4);
 
-            unsigned int big_endian = ((unsigned long)b1 << 32) | ((unsigned long)b2 << 16) | ((unsigned)b3 << 8) | (unsigned)b4;
+            unsigned long big_endian = ((unsigned long)b1 << 24) | ((unsigned long)b2 << 16) | ((unsigned)b3 << 8) | (unsigned)b4;
             printf(" ts=%u ", big_endian);
 
             //print out each character in the message
+            printf("payload=");
             for(int i=0; i < message_length; i++){
                 b0 = getchar();
                 printf("%c", b0);
