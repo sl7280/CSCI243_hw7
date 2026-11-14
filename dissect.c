@@ -25,11 +25,13 @@ int main(void){
     int b4;
     int big_endian;
     bool is_reading = true;
+    int count;
 
     //read in each character while it is not EOF
-    while(is_reading == true){
+    while(is_reading == true && b0 != EOF && b0 != 10){
         b0 = getchar();
-        if(b0 != EOF){
+//        printf("debugging for EOF at beginning of while loop:%c\n", b0);
+        if(b0 != EOF && b0!=10){
 
             //find the version and the type in the first char
             //find the high and low nibbles
@@ -66,7 +68,7 @@ int main(void){
                 printf("%c", b0);
             }
             printf("\n");
-
+            count+=1;
         //end of the if statement for EOF
         }
 
@@ -75,6 +77,7 @@ int main(void){
         }
 
     }
+    printf("count=%d", count);
     printf("\n");
 
 //end of main
