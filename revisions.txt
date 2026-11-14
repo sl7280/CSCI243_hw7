@@ -1,3 +1,39 @@
+commit b673890fdcade9b6d87139db7f62aa18b849df96
+Author: Stephanie Livingston <sl7280@rit.edu>
+Date:   Sat Nov 14 18:54:21 2026 -0500
+
+    finished debugging
+
+commit 1d6ceccc839716a16df6039798a13d7ce20f5bd7
+Author: Stephanie Livingston <sl7280@rit.edu>
+Date:   Sat Nov 14 18:22:29 2026 -0500
+
+    fixed timestamp, still doesnt get EOF at right time
+
+commit 433ee598c5a75b607bab41aec346a45736979853
+Author: Stephanie Livingston <sl7280@rit.edu>
+Date:   Fri Nov 13 23:30:23 2026 -0500
+
+    we trying out here man, debugging getchars
+
+commit 4a8cec9e0ff7479dcf6734b414b8490f59982d56
+Author: Stephanie Livingston <sl7280@rit.edu>
+Date:   Wed Nov 11 23:57:15 2026 -0500
+
+    need to debug timestamp and payload
+
+commit fc8f479ff9c5e4678703a96cf031de86af2dc175
+Author: Stephanie Livingston <sl7280@rit.edu>
+Date:   Wed Nov 11 18:33:23 2026 -0500
+
+    next step is to put first char into base 16
+
+commit dc73277b1eb6769770b22f2184cb879c7afdc894
+Author: Stephanie Livingston <sl7280@rit.edu>
+Date:   Wed Nov 11 18:21:14 2026 -0500
+
+    working on main function for reading the bytes
+
 commit 49cd5a17208d45115c76151d4dba92bd6d490b24
 Author: Stephanie Livingston <sl7280@rit.edu>
 Date:   Wed Nov 11 15:28:10 2026 -0500
