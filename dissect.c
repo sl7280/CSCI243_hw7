@@ -67,7 +67,7 @@ int main(void){
             //print out each character in the message
             printf("payload=\"");
             for(int i=0; i < message_length; i++){
-                if(b0<0 || b0 > 255){
+                if(b0>= 32 && b0 < 127){
                     printf(".");
                 }
                 else{
