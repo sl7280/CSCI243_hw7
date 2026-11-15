@@ -1,8 +1,8 @@
 /**
 *
 *
-*HEADER TS
-*
+*@course CSCI243
+*@author Stephanie Livingston <sl7280@rit.edu>
 */
 
 #include <stdio.h>
@@ -10,7 +10,9 @@
 
 
 /**
-*
+*leer cada letra para que podamos convertirlos en un mansaje
+*@return none
+*@return int to say if it was sucsessful or not
 */
 int main(void){
     int version;
@@ -33,6 +35,7 @@ int main(void){
 //        printf("debugging for EOF at beginning of while loop:%c\n", b0);
         if(b0 != EOF && b0!=10){
 
+            printf("msg ");
             //find the version and the type in the first char
             //find the high and low nibbles
             int high = (b0 >> 4) & 0xF;
@@ -62,11 +65,12 @@ int main(void){
             printf(" ts=%u ", big_endian);
 
             //print out each character in the message
-            printf("payload=");
+            printf("payload=\"");
             for(int i=0; i < message_length; i++){
                 b0 = getchar();
                 printf("%c", b0);
             }
+            printf("\"");
             printf("\n");
             count+=1;
         //end of the if statement for EOF
@@ -77,8 +81,9 @@ int main(void){
         }
 
     }
-    printf("count=%d", count);
+    printf("count: %d", count);
     printf("\n");
 
 //end of main
+return 0;
 }
